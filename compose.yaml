@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  deliang_devops:
+    image: delianghan:v1 # image we want to build 
+    build: . # location of dockerfile
+    container_name: delianghan
+    ports:
+      - 1234:80 
