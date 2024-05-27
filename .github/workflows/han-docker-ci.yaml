@@ -36,7 +36,7 @@ jobs:
 
       - name: try to login from runner to docker hub account
         run: |
-          docker login -u delianghan -p HelloDocker@123
+          docker login -u delianghan -p Resolution@8
           docker tag delianghan:v1 docker.io/deliang:v1
           # above command to make an alias of image to docker hub format
           docker push docker.io/deliang:v1
