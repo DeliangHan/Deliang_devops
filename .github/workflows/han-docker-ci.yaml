@@ -33,3 +33,13 @@ jobs:
           echo  "access health.html page using curl "
           curl -f  http://localhost:1234/health.html
           # here we will get http response code 200 
+
+      - name: try to login from runner to docker hub account
+        run: |
+          docker login -u delianghan -p HelloDocker@123
+          docker tag delianghan:v1 docker.io/deliang:v1
+          # above command to make an alias of image to docker hub format
+          docker push docker.io/deliang:v1
+          docker logout
+          
+
