@@ -58,5 +58,11 @@ jobs:
       - name: docker logout from runner after pushing image 
         run: docker logout 
 
+      - name: SonarQube Scan
+        uses: sonarsource/sonarqube-scan-action@v2.1.0 # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
           
 
