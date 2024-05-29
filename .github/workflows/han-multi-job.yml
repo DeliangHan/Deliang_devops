@@ -40,11 +40,11 @@ jobs:
           echo "docker related details "
           docker version 
           docker-compose version
-      - name: downloading artifacts 
-        uses: actions/download-artifact@v4
-        with:
-          name: ashu-artifact
-          path: . 
+     # - name: downloading artifacts 
+      #  uses: actions/download-artifact@v4
+      #  with:
+      #    name: ashu-artifact
+        #  path: . 
       - name: docker compose to build and test
         run: |
           ls -a 
