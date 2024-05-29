@@ -68,5 +68,9 @@ jobs:
       #    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
        #   SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
-          
+      - name: using local sonar-scanner
+        run: |
+          pwd 
+          sonar-scanner -D"sonar.projectKey=deliang-python-project" -D"sonar.sources=." -D"sonar.host.url=${{ secrets.SONAR_HOST_URL }}" -D"sonar.token=${{ secrets.SONAR_TOKEN }}"
+      
 
