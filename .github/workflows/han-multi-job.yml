@@ -1,4 +1,4 @@
-name: ashu app containerization pipeline 
+name: Deliang app containerization pipeline 
 # Trigger -- when this pipeline should start
 on:
   push:
