@@ -55,7 +55,7 @@ jobs:
       - name: verify health check page by access it usign postman / curl 
         run: |
           echo  "access health.html page using curl "
-          curl -f  http://localhost:1234/health.html
+          curl -f  http://localhost:1234/index.html
       - id: ecr-publish
         uses: bitovi/github-actions-ecr-publish@v0.1.0
         with:
