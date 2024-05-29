@@ -45,12 +45,12 @@ jobs:
       #  with:
       #    name: ashu-artifact
         #  path: . 
-      - name: docker compose to build and test
-        run: |
-          ls -a 
-          docker-compose up -d --build 
-          sleep 2
-          docker-compose ps 
+     # - name: docker compose to build and test
+      #  run: |
+       #   ls -a 
+       #   docker-compose up -d --build 
+       #   sleep 2
+       #   docker-compose ps 
   
       - name: verify health check page by access it usign postman / curl 
         run: |

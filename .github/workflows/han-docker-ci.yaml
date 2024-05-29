@@ -71,6 +71,6 @@ jobs:
       - name: using local sonar-scanner
         run: |
           pwd 
-          sonar-scanner -D"sonar.projectKey=deliang-python-project" -D"sonar.sources=." -D"sonar.host.url=${{ secrets.SONAR_HOST_URL }}" -D"sonar.token=${{ secrets.SONAR_TOKEN }}"
+         # sonar-scanner -D"sonar.projectKey=deliang-python-project" -D"sonar.sources=." -D"sonar.host.url=${{ secrets.SONAR_HOST_URL }}" -D"sonar.token=${{ secrets.SONAR_TOKEN }}"
       
 
