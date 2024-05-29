@@ -7,7 +7,7 @@ on:
 
 # creating multiple jobs
 jobs:
-  ashu-code-checkjob:
+  del-code-checkjob:
     runs-on: ubuntu-latest
     steps:
       - name: checking only 
@@ -15,17 +15,17 @@ jobs:
           echo "just checking"
           whoami 
 
-  ashu-sast-job:
+  del-sast-job:
     runs-on: self-hosted
-    needs: ashu-code-checkjob # it will wait for job1 to finis 
+    needs: del-code-checkjob # it will wait for job1 to finis 
     steps:
-      - name: checking docker version and sonarscanner 
+      - name: pwd and whoami
         run: |
           pwd  
           whoami 
-  ashu-build-job:
+  del-build-job:
     runs-on: macos-latest
-    needs: ashu-sast-job # it will wait for SAST job to finish
+    needs: del-sast-job # it will wait for SAST job to finish
     steps:
       - name: just check general message
         run: |
